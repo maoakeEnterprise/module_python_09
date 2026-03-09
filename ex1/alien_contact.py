@@ -63,15 +63,13 @@ def get_data_from_json(path: str) -> list:
 
 def create_contact(contacts: list) -> list:
     data = []
-    try:
-        for var in contacts:
+    for var in contacts:
+        try:
             data.append(AlienContact(**var))
-            print("test")
-    except Exception as e:
-        print(f"Type Error: {e.__class__.__name__}")
-        print(f"Message Error: {e}")
-    finally:
-        return data
+        except Exception as e:
+            print(f"Type Error: {e.__class__.__name__}")
+            print(f"Message Error: {e}")
+    return data
 
 
 def print_contats(contacts: list[AlienContact]) -> None:
@@ -92,8 +90,10 @@ START
 
 
 def main() -> None:
+    print("==============================")
+    print("Alien Contact Log Validation")
+    print("==============================")
     data = get_data_from_json("../generated_data/alien_contacts.json")
-    # print_json(data)
     contacts = create_contact(data)
     print_contats(contacts)
 
