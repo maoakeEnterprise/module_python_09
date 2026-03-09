@@ -1,2 +1,4 @@
 data_exporter.py
 data_generator.py
+venv
+__pycache__
