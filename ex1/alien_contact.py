@@ -34,6 +34,7 @@ class AlienContact(BaseModel):
         if self.signal_strength > 7 and not self.message_received:
             raise ValueError("When the signal is upper 7.0 "
                              "you should received a message")
+        return self
 
     def print_info(self) -> None:
         print("======================================")
@@ -96,6 +97,9 @@ def main() -> None:
     data = get_data_from_json("../generated_data/alien_contacts.json")
     contacts = create_contact(data)
     print_contats(contacts)
+    data = get_data_from_json("../generated_data/invalid_contacts.json")
+    create_contact(data)
+    print("==================================")
 
 
 if __name__ == "__main__":

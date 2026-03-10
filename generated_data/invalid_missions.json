@@ -1,0 +1,58 @@
+[
+  {
+    "mission_id": "M2024_TITAN",
+    "mission_name": "Solar Observatory Research Mission",
+    "destination": "Solar Observatory",
+    "launch_date": "2024-03-30T00:00:00",
+    "duration_days": 451,
+    "crew": [
+      {
+        "member_id": "CM001",
+        "name": "Sarah Williams",
+        "rank": "captain",
+        "age": 43,
+        "specialization": "Mission Command",
+        "years_experience": 19,
+        "is_active": false
+      },
+      {
+        "member_id": "CM002",
+        "name": "James Hernandez",
+        "rank": "captain",
+        "age": 43,
+        "specialization": "Pilot",
+        "years_experience": 30,
+        "is_active": true
+      },
+      {
+        "member_id": "CM003",
+        "name": "Anna Jones",
+        "rank": "cadet",
+        "age": 35,
+        "specialization": "Communications",
+        "years_experience": 15,
+        "is_active": true
+      },
+      {
+        "member_id": "CM004",
+        "name": "David Smith",
+        "rank": "commander",
+        "age": 27,
+        "specialization": "Security",
+        "years_experience": 15,
+        "is_active": true
+      },
+      {
+        "member_id": "CM005",
+        "name": "Maria Jones",
+        "rank": "cadet",
+        "age": 55,
+        "specialization": "Research",
+        "years_experience": 30,
+        "is_active": true
+      }
+    ],
+    "mission_status": "planned",
+    "budget_millions": 2208.1
+  }
+]
