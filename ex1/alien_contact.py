@@ -78,7 +78,7 @@ def print_contats(contacts: list[AlienContact]) -> None:
         contact.print_info()
 
 
-def print_json(data: list):
+def print_json(data: list) -> None:
     print("""
 =====================
 START

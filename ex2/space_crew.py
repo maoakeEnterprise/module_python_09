@@ -85,7 +85,7 @@ def create_crew(crew: list) -> list[CrewMember]:
     return res
 
 
-def get_from_json(path: str):
+def get_from_json(path: str) -> list:
     res = []
     try:
         with open(path, "r") as file:
