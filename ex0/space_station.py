@@ -39,7 +39,7 @@ def create_data(data: list) -> list:
         return tab
 
 
-def print_data(data: list[SpaceStation]):
+def print_data(data: list[SpaceStation]) -> None:
     for station in data:
         station.print_info()
 

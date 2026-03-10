@@ -41,7 +41,7 @@ class SpaceMission(BaseModel):
     budget_millions: float = Field(ge=1, le=10000)
 
     @model_validator(mode="after")
-    def check_after(self) -> None:
+    def check_after(self):
         if not self.mission_id.startswith("M"):
             raise NameError("The mission ID should start with a M")
         crew = [member for member in self.crew
