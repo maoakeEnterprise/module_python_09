@@ -13,7 +13,7 @@ class Rank(Enum):
 
 
 class CrewError(Exception):
-    def __init__(self, mess) -> None:
+    def __init__(self, mess: str) -> None:
         super().__init__(f"CrewError: {mess}")
 
 
@@ -41,7 +41,7 @@ class SpaceMission(BaseModel):
     budget_millions: float = Field(ge=1, le=10000)
 
     @model_validator(mode="after")
-    def check_after(self):
+    def check_after(self) -> 'SpaceMission':
         if not self.mission_id.startswith("M"):
             raise NameError("The mission ID should start with a M")
         crew = [member for member in self.crew
