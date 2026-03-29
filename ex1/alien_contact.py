@@ -69,7 +69,6 @@ def create_contact(contacts: list) -> list:
             data.append(AlienContact(**var))
         except Exception as e:
             print(f"Type Error: {e.__class__.__name__}")
-            print(f"{e.errors()[0]['msg']}")
     return data
 
 
