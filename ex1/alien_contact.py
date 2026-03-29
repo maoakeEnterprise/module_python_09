@@ -24,7 +24,7 @@ class AlienContact(BaseModel):
     is_verified: bool = False
 
     @model_validator(mode="after")
-    def check_id(self):
+    def check_id(self) -> 'AlienContact':
         if not self.contact_id.startswith("AC"):
             raise ValueError("contact_id should start with AC")
         if not self.is_verified and self.contact_type == ContactType.PHYSICAL:
@@ -69,7 +69,7 @@ def create_contact(contacts: list) -> list:
             data.append(AlienContact(**var))
         except Exception as e:
             print(f"Type Error: {e.__class__.__name__}")
-            print(f"Message Error: {e}")
+            print(f"{e.errors()[0]['msg']}")
     return data
 
 
